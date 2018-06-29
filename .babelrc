@@ -1,0 +1,13 @@
+{
+  "presets":["env", "react", "stage-3", "flow"],
+  "plugins": [
+    "transform-regenerator",
+    "transform-object-rest-spread",
+    "syntax-dynamic-import",
+    "dynamic-import-webpack",
+    [ "transform-runtime", {
+      "polyfill": false,
+      "regenerator": true
+    }]
+  ]
+}
