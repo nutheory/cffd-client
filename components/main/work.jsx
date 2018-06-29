@@ -170,10 +170,10 @@ class Work extends Component<Props, State>{
         </Modal>
         <div className="py-16 px-6 md:px-0 container mx-auto">
           <Zoom>
-          <h2 className="title text-center mt-16 t-shadow">work</h2>
-          <h4 className="text-center mt-2 text-lg md:text-2xl t-shadow">Check out our latest work in UI/UX design, website design/development, and app development.</h4>
-        </Zoom>
-          <Fade top cascade>
+            <h2 className="title text-center mt-16 t-shadow">work</h2>
+            <h4 className="text-center mt-2 text-lg md:text-2xl t-shadow">Check out our latest work in UI/UX design, website design/development, and app development.</h4>
+          </Zoom>
+          <Fade bottom cascade>
             <div className="body mt-20 -mx-6 flex flex-wrap">
               { works.map((wk, i) => (
                 <div

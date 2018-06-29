@@ -49,7 +49,10 @@ const About = (props: Object) => {
               <p className="t-shadow">When people talk about functional programming
                 and/or development they are referring to a simple task based way of solving
                 complex problems. Functional problem solving favors composition over
-                inheritance, and reducing side effects of code by using immutable state.
+                inheritance (removing shared state) and reducing side effects in an
+                effort to increase the predictability of your apps behavior. Separating
+                side effects from the rest of your logic can make a program easier to
+                maintain, test, debug, extend and refactor.
                 </p>
             </div>
             <div className="w-full md:w-1/3 p-6">
