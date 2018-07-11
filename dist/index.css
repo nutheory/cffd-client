@@ -79,7 +79,6 @@ body {
 
 h2.title {
   font-family: 'Shrikhand', cursive;
-  font-size: 4rem;
   font-weight: normal;
   line-height: .9;
 }
@@ -122,24 +121,16 @@ h2.title {
 
 .about h4 {
   color: #b8b8b8;
-  font-size: 1.4rem;
   font-weight: 300;
 }
 
-.about .body {
-  line-height: 1.6rem;
-}
-
 .about .body h3 {
-  margin-bottom: 1rem;
   font-family: 'Shrikhand', cursive;
   font-weight: normal;
-  font-size: 1.6rem;
 }
 
 .work {
   width: 100vw;
-  height: 100vh;
   background-image: url(assets/de4a152554239597ea3a2701c08c0017.jpg);
   background-position: center;
   background-repeat: no-repeat;
@@ -148,13 +139,11 @@ h2.title {
 
 .work h4 {
   color: #b8b8b8;
-  font-size: 1.4rem;
   font-weight: 300;
 }
 
 .contact {
   width: 100vw;
-  height: 50vh;
   border-top: 1px solid #666;
   background-image: url(assets/18602cdbdeca11e11f9646d5a21bd052.jpg);
   background-position: center;
@@ -162,10 +151,75 @@ h2.title {
   background-size: cover;
 }
 
-.headshot {
-  /* position: absolute;
+.contact .contact-button {
+  position: relative;
+  -webkit-perspective: 1000;
+  -webkit-backface-visibility: hidden;
+  -webkit-transform: translate3d(0, 0, 0);
+  color: #fff;
+  text-decoration: none;
+     text-transform: uppercase;
+  font-weight: 500;
+  font-size: 1.2em;
+  border: 2px solid #fff;
+  border-radius: 4px;
+  padding: 20px 60px 20px 60px;
+  transition: .3s ease-in-out;
+}
+
+.contact .contact-button span {
+  text-transform: none;
+  position: absolute;
+  color: #ee283e;
   top: 20px;
-  left: 20px;*/
+  left: 36px;
+  opacity: 0;
+  transition: all 0s ease 0s;
+}
+
+.contact .contact-button:hover {
+  transition: .3s ease-in-out;
+  border: 2px solid #fff;
+  border-radius: 50px;
+  background-color: #fff;
+}
+
+.contact .contact-button:hover>span {
+  opacity: 1;
+  transition: all .25s ease-in-out .1s;
+}
+
+.contact .contact-button:hover:before {
+  transition: .3s ease-in-out;
+  background-color: #ee283e;
+}
+
+.contact .contact-button:before,
+.contact .contact-button:after {
+  content: "";
+  position: absolute;
+  top: -14px;
+  left: -12px;
+  width: 132px;
+  height: 25px;
+}
+
+.contact .contact-button:before {
+  border: 2px solid #ee283e;
+  background-color: #1f3944;
+  transform: skew(-25deg);
+  transition: .3s ease-in-out;
+}
+
+.contact .contact-button:after {
+  content: "Available for work";
+  font-size: .45em;
+  top: -7px;
+  left: 0;
+  color: #fff;
+}
+
+.headshot {
   width: 200px;
   height: 200px;
   background: url(assets/e774f23cc14897e433f78e5d4afb9b64.png) no-repeat 0 0;
@@ -222,8 +276,90 @@ a:active {
 }
 
 .study span {
-  font-size: 1rem;
   font-weight: 300;
+}
+
+a.button {
+  position: relative;
+  display: inline-block;
+  padding: 1.2em 3em 1.2em 5.2em;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  color: white;
+}
+
+a.button.github:before {
+  background-image: url(assets/1f4d27b162c9f6302baacca8ef535926.svg);
+  background-size: 32px;
+  background-position: 40px 10px;
+}
+
+a.button.stack:before {
+  background-image: url(assets/df131836f90f428cf1eb592805673105.svg);
+  background-size: 26px;
+  background-position: 40px 10px;
+}
+
+a.button.linked-in:before {
+  background-image: url(assets/ae297dafeb5ed828d974d60a81e9b85c.svg);
+  background-size: 32px;
+  background-position: 40px 10px;
+}
+
+a.button.resume:before {
+  background-image: url(assets/9a72e4e7bbec855f01e184e98246badb.svg);
+  background-size: 42px;
+  background-position: 32px 14px;
+}
+
+a.button:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-repeat: no-repeat;
+  border-radius: 4px;
+  transition: box-shadow .5s ease, transform .2s ease;
+  will-change: transform;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, .2);
+  transform: translateY(0) rotateX(0) rotateY(0) translateZ(-12px);
+  transform: translateY(var(--ty, 0)) rotateX(var(--rx, 0)) rotateY(var(--ry, 0)) translateZ(var(--tz, -12px));
+}
+
+a.button:hover:before {
+  border: 2px solid #333;
+  box-shadow: 0 8px 8px rgba(0, 0, 0, .8);
+}
+
+a.button:after {
+  position: relative;
+  display: inline-block;
+  content: attr(data-title);
+  transition: transform .2s ease;
+  font-weight: bold;
+  letter-spacing: .01em;
+  will-change: transform;
+  transform: translateY(0) rotateX(0) rotateY(0);
+  transform: translateY(var(--ty, 0)) rotateX(var(--rx, 0)) rotateY(var(--ry, 0));
+}
+
+.button-boundary {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: center;
+      justify-content: center;
+  height: 80px;
+  transform-style: preserve-3d;
+  transform: perspective(800px);
 }
 
 /*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */

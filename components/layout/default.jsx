@@ -1,8 +1,13 @@
+// @flow
 import React, { Component } from 'react'
 import { Route, Redirect } from 'react-router-dom'
 import PublicHeader from './public_header'
-// import PublicFooter from './footers/public_footer'
-// import jwtDecode from 'jwt-decode'
+
+type Props = {
+  component: any
+}
+
+type State = {}
 
 class DefaultLayout extends Component<Props, State>{
 
@@ -10,10 +15,10 @@ class DefaultLayout extends Component<Props, State>{
   jumpAbout: Function
   jumpWork: Function
   jumpContact: Function
-  about: Node
-  work: Node
-  contact: Node
-  intro: Node
+  about: any
+  work: any
+  contact: any
+  intro: any
 
   constructor(){
     super()
@@ -41,30 +46,23 @@ class DefaultLayout extends Component<Props, State>{
   }
 
   render(){
-    // let user
-    // try{
-    //   user = jwtDecode(localStorage.getItem('hf_auth_header_token'))
-    // } catch(e){
-    // }
+
     const Component = this.props.component
     return (
       <Route render={ props => (
         <div>
-          {/* { !user ? */}
-            <div className="">
-              <PublicHeader {...props}
-                jumpIntro={this.jumpIntro}
-                jumpAbout={this.jumpAbout}
-                jumpWork={this.jumpWork}
-                jumpContact={this.jumpContact} />
-              <Component {...props}
-                introRef={ node => this.intro = node }
-                aboutRef={ node => this.about = node }
-                workRef={ node => this.work = node }
-                contactRef={ node => this.contact = node } />
-              {/* <PublicFooter {...props} /> */}
-            </div>
-          {/* } */}
+          <div className="">
+            <PublicHeader {...props}
+              jumpIntro={this.jumpIntro}
+              jumpAbout={this.jumpAbout}
+              jumpWork={this.jumpWork}
+              jumpContact={this.jumpContact} />
+            <Component {...props}
+              introRef={ node => this.intro = node }
+              aboutRef={ node => this.about = node }
+              workRef={ node => this.work = node }
+              contactRef={ node => this.contact = node } />
+          </div>
         </div>
       )} />
     )

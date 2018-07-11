@@ -1,17 +1,19 @@
 // @flow
-import React, { Component, Node } from 'react'
+import React, { Component } from 'react'
+import { isBrowser, isMobile } from "react-device-detect"
 import Intro from './intro'
 import About from './about'
 import Work from './work'
 import Contact from './contact'
 
 type Props = {
+  contactRef: Node,
+  introRef: Node,
   aboutRef: Node,
   workRef: Node
 }
 
 type State = {
-  // bgPinned: boolean
 }
 
 class Index extends Component<Props, State>{
@@ -21,21 +23,15 @@ class Index extends Component<Props, State>{
 
   constructor(){
     super()
-
-    // this.jumpAbout = this.jumpAbout.bind(this)
   }
-
-  // jumpAbout(){
-  //   this.about.scrollIntoView({behavior: "smooth", block: "start"})
-  // }
 
   render(){
     return(
       <div>
         <Intro introRef={ this.props.introRef } />
-        <div className="quote"></div>
+        { isBrowser ? <div className="quote"></div> : null }
         <About aboutRef={ this.props.aboutRef } />
-        <div className="gap"></div>
+        { isBrowser ? <div className="gap"></div> : null }
         <Work workRef={ this.props.workRef } />
         <Contact contactRef={ this.props.contactRef } />
       </div>
