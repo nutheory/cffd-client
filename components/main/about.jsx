@@ -2,6 +2,7 @@
 import React, { Component } from 'react'
 import Zoom from 'react-reveal/Zoom'
 import Fade from 'react-reveal/Fade'
+import Scroll from './scroll'
 import { isBrowser, isMobile } from "react-device-detect"
 
 const bgs = [
@@ -12,7 +13,7 @@ const bgs = [
 
 const About = (props: Object) => {
   return(
-    <div className="about" ref={props.aboutRef} style={{ height: `${window.innerHeight < 800 ? 'auto' : '100vh'}`, backgroundImage: `url(${bgs[Math.floor(Math.random()*bgs.length)]})` }}>
+    <div className="about relative" ref={props.aboutRef} style={{ height: `${window.innerHeight < 800 ? 'auto' : '100vh'}`, backgroundImage: `url(${bgs[Math.floor(Math.random()*bgs.length)]})` }}>
       <div className="py-8 md:py-16 px-6 md:px-0 container mx-auto">
         <Zoom>
           <h2 className="text-4xl md:text-5xl title text-center mt-8 md:mt-16 t-shadow">about</h2>
@@ -81,6 +82,7 @@ const About = (props: Object) => {
             </div>
           </div>
         </Fade>
+        <Scroll jump={props.jumpWork} />
       </div>
     </div>
   )

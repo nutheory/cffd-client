@@ -3,6 +3,7 @@ import React, { Component } from 'react'
 import Modal from 'react-responsive-modal'
 import Zoom from 'react-reveal/Zoom'
 import Fade from 'react-reveal/Fade'
+import Scroll from './scroll'
 const works = [
   {
     title: "Gravit.ist",
@@ -152,7 +153,8 @@ const works = [
 
 
 type Props = {
-  workRef : any
+  workRef : any,
+  jumpContact: Function
 }
 
 type State = {
@@ -213,7 +215,7 @@ class Work extends Component<Props, State>{
   render(){
     const { open, title, objective, solution, link, stack } = this.state
     return(
-      <div className="work" ref={this.props.workRef}>
+      <div className="work relative" ref={this.props.workRef} style={{ height: `${window.innerHeight < 800 ? 'auto' : '100vh'}` }}>
         <Modal
           open={open}
           onClose={this.onCloseModal} center
@@ -270,6 +272,7 @@ class Work extends Component<Props, State>{
             </div>
           </Fade>
         </div>
+        <Scroll jump={ this.props.jumpContact } />
       </div>
     )
   }

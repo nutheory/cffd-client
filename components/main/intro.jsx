@@ -1,6 +1,7 @@
 // @flow
 import React, { Component } from 'react'
 import Particles from 'react-particles-js'
+import Scroll from './scroll'
 
 const Intro = (props: Object) => {
   return (
@@ -125,6 +126,7 @@ const Intro = (props: Object) => {
           },
           "retina_detect": true
         }}/>
+        <Scroll jump={props.jumpAbout} />
       </div>
     </div>
   )

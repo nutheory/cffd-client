@@ -58,6 +58,9 @@ class DefaultLayout extends Component<Props, State>{
               jumpWork={this.jumpWork}
               jumpContact={this.jumpContact} />
             <Component {...props}
+              jumpAbout={this.jumpAbout}
+              jumpWork={this.jumpWork}
+              jumpContact={this.jumpContact}
               introRef={ node => this.intro = node }
               aboutRef={ node => this.about = node }
               workRef={ node => this.work = node }
