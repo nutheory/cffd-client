@@ -22,10 +22,10 @@ const About = (props: Object) => {
             <div className="header w-full px-8 py-4">
               <p className="text-sm md:text-xl leading-normal t-shadow">
                 <img src={require('../assets/headshot.png')} className=" rounded-full border-grey-darker border-4 bolder-solid mr-4 float-left w-20" />
-                Since the creation of my first app in 2003 I've always been drawn to
-                the overlap between design and development. My skills are broad:
-                from UX to design, front end to back end development. I enjoy each
-                aspect, and love building sites from start to finish & exploring new
+                Since the creation of my first app in 2003, I've always been drawn to 
+                the overlap between design and development. My skills are broad: 
+                from UX to design, front-end to back-end development. I enjoy each 
+                aspect, and love building sites from start to finish & exploring new 
                 technologies.
               </p>
             </div>
@@ -35,10 +35,10 @@ const About = (props: Object) => {
               </div>
               <div className="w-full md:flex-1">
                 <p className="text-sm md:text-xl leading-normal t-shadow">
-                  Since the creation of my first app in 2003 I've always been drawn to
-                  the overlap between design and development. My skills are broad:
-                  from UX to design, front end to back end development. I enjoy each
-                  aspect, and love building sites from start to finish & exploring new
+                  Since the creation of my first app in 2003, I've always been drawn to 
+                  the overlap between design and development. My skills are broad: 
+                  from UX to design, front-end to back-end development. I enjoy each 
+                  aspect, and love building sites from start to finish & exploring new 
                   technologies.
                 </p>
               </div>
