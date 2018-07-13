@@ -9,15 +9,17 @@ const works = [
     title: "Gravit.ist",
     name: "gravitist",
     filename: "gravitist@2x.png",
-    objective: `<p>Create online service to facilitate real estate agents being able 
-      to order aerial photographs and videos of properties for marketing of residential homes. 
-      Requirements included billing the agent who orders the filming, followed by alerting local 
-      pilots of the filming opportunity. Once the filming was completed/uploaded it gets reviewed
-      and the acceptance of the video triggers a automatic payout to the pilot.</p>`,
-    solution: `<p>Leveraging Postgres's Earthdistance Extention for looking up local pilots based 
-      off Lat/Lng as well as several API's including Google Maps, Amazon S3, Transloadit for 
-      efficient media processing, and Stripe for payments and payouts. Also there is a admin 
-      dashboard to keep track of pilots that dont follow through on missions, and to track all 
+    objective: `<p>To create online service to facilitate real estate agents being 
+      able to order aerial photographs and videos of properties for marketing of 
+      residential homes. Requirements included billing the agent who orders the 
+      filming, followed by alerting local pilots of the filming opportunity. Once 
+      the filming was completed/uploaded it gets reviewed and the acceptance of 
+      the video triggers an automatic payout to the pilot.</p>`,
+    solution: `<p>Leveraging Postgres's Earthdistance Extention for looking up 
+      local pilots based off Lat/Lng as well as several API's including Google 
+      Maps, Amazon S3, Transloadit for efficient media processing, and Stripe 
+      for payments and payouts. Also, there is an admin dashboard to keep 
+      track of pilots that don't follow through on missions and to track all 
       orders and their statuses.</p>`,
     link: "https://staging.gravit.ist",
     stack: [
@@ -37,16 +39,16 @@ const works = [
     title: "Cloud MLX",
     name: "mlx",
     filename: "mlx@2x.png",
-    objective: `<p>Create a MLS search/social network with features that include
+    objective: `<p>To Create an MLS search/social network with features that include
       natural language search (ie. "4 Beds 3 baths $2mil") and drawing polygon areas 
       on a map to search locations. Other requirements included...must be able to search 
       listings by agent, be integrated with existing WR products, a UI experience as 
       familiar as Trulia/Zillow, and be much more performant than current MLS systems 
       on the market. </p>`,
-    solution: `<p>In order to achieve all these ambitious goals we decided on building 
-      a single page application with a custom javascript front-end and a service oriented 
+    solution: `<p>In order to achieve all these ambitious goals, we decided on building 
+      a single page application with a custom javascript front-end and a service-oriented 
       Rails API. All MLS data was normalized and indexed through Elasticsearch for speedy 
-      lookups and most proof of concepts where created in isolation using Node/Express 
+      lookups and most proofs of concepts were created in isolation using Node/Express 
       with MongoDB.</p><br /><p class="t-shadow italic">Cloud MLX was awarded the 
       2016 Inman Innovator Award for Most Innovative Technology.</p>`,
     link: "https://cloudmlx.com/",
@@ -65,7 +67,7 @@ const works = [
     title: "The Brain Factory",
     name: "brain",
     filename: "brain@2x.png",
-    objective: `<p>Revamp a 15 year old web presence to accurately reflect the type of work 
+    objective: `<p>Revamp a 15-year-old web presence to accurately reflect the type of work 
       this immersive entertainment company currently produces. Over the years The Brain 
       Factory shifted focus from 3D media to Virtual Reality and had new projects and events 
       to highlight before the release of their documentary HAUNTERS (currently on Netflix 
@@ -87,9 +89,9 @@ const works = [
     title: "Cloud Streams",
     name: "streams",
     filename: "streams@2x.png",
-    objective: `<p>Create a email and text alert system to notify agents and buyers of new 
+    objective: `<p>To create an email and text alert system to notify agents and buyers of new 
       properties as they hit the market based on criteria the agent sets up. This includes social 
-      features like property discussions and a analytics dashboard to track market details 
+      features like property discussions and an analytics dashboard to track market details 
       and client engagement. </p>`,
     solution: `<p>This was accomplished by leveraging the same Rails API built for Cloud MLX, 
       Sendgrid, and Twilio. Just as with MLX all data got normalized and indexed through 
@@ -110,10 +112,10 @@ const works = [
     title: "Haunters",
     name: "haunters",
     filename: "haunters@2x.png",
-    objective: `<p>Create a blog to engage and excite horror fans about the upcoming release of 
+    objective: `<p>To create a blog to engage and excite horror fans about the upcoming release of 
       the HAUNTERS documentary. Ancillary benefits to this blog included thanking all the 
       Kickstarter supporters for their help and to facilitate pre-orders.</p>`,
-    solution: `<p>Time being a factor we opted for Squarespace with all of its blogging 
+    solution: `<p>Time as a factor we opted for Squarespace with all of its blogging 
       glory and get this up and running extremely fast to appease the fans and display give 
       them a small taste in form of trailers to gin up excitement.</p>`,
     link: "http://www.hauntersmovie.com/",
@@ -128,14 +130,14 @@ const works = [
     title: "Cloud CMA",
     name: "cma",
     filename: "cma@2x.png",
-    objective: `<p>To Expand user base of Cloud CMA by adding several new features including a lead 
-      generation tool (recently made into its own product called Cloud Attract), ipad presentational 
-      version of CMA's, and a bookmarklet tool that allowed CMA creation using a agents current MLS 
-      software. </p>`,
-    solution: `<p>Used a variety of tools to build these features, early iterations of the ipad 
-      CMA's used Elasticsearch and Backbone, while the Bookmarklet was built using a small sinatra 
-      server to create a custom script on the fly to inject JS into a MLS system to interact with 
-      our Rails API.</p>`,
+    objective: `<p>To Expand user base of Cloud CMA by adding several new features including 
+      a lead generation tool (recently made into its own product called Cloud Attract), iPad 
+      presentational version of CMA's, and a bookmarklet tool that allowed CMA creation using 
+      agents current MLS software.</p>`,
+    solution: `<p>Used a variety of tools to build these features, early iterations of the 
+      iPad CMA's used Elasticsearch and Backbone, while the Bookmarklet was built using a 
+      small Sinatra server to create a custom script on the fly to inject JS into an MLS 
+      system to interact with our Rails API.</p>`,
     link: "https://cloudcma.com/",
     stack: [
       { logo: "ruby.svg", name: "Ruby", link: "https://www.ruby-lang.org/en/" },

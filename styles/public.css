@@ -317,13 +317,19 @@ a.button{
   &.linked-in:before {
     background-image: url('../components/assets/linked-in.svg');
     background-size: 32px;
-    background-position: 40px 10px;
+    background-position: 44px 10px;
   }
 
   &.resume:before {
     background-image: url('../components/assets/phoenix.svg');
     background-size: 42px;
     background-position: 32px 14px;
+  }
+
+  &.angel:before {
+    background-image: url('../components/assets/angellist.svg');
+    background-size: 26px;
+    background-position: 44px 10px;
   }
 
 	&:before {

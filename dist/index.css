@@ -331,13 +331,19 @@ a.button.stack:before {
 a.button.linked-in:before {
   background-image: url(assets/ae297dafeb5ed828d974d60a81e9b85c.svg);
   background-size: 32px;
-  background-position: 40px 10px;
+  background-position: 44px 10px;
 }
 
 a.button.resume:before {
   background-image: url(assets/9a72e4e7bbec855f01e184e98246badb.svg);
   background-size: 42px;
   background-position: 32px 14px;
+}
+
+a.button.angel:before {
+  background-image: url(assets/a4662c1b6cb176228b56e3dae5e0c06e.svg);
+  background-size: 26px;
+  background-position: 44px 10px;
 }
 
 a.button:before {

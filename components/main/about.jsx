@@ -49,35 +49,34 @@ const About = (props: Object) => {
             <div className="w-full md:w-1/3 p-6">
               <h3 className="text-xl md:text-3xl t-shadow">creative</h3>
               <p className="text-sm md:text-lg t-shadow">At cffd.ink we always strive to find the apex where
-                identity, visual, interaction and UX design converge to achieve a fluid
+                identity, visual, interaction, and UX design converge to achieve a fluid
                 flow of consistent messaging. The aesthetics of any brand or product should
                 always be intentional without appearing coerced into its application. Our
                 philosophy on creative work is to say a lot, with as little as possible to
-                keep your messaging clear and precise. Properly done the aspects of
+                keep your message clear and precise. Properly done the aspects of
                 creativity will we keep the end user engaged and instill a sense of
                 confidence in your target audience.
               </p>
             </div>
             <div className="w-full md:w-1/3 p-6">
               <h3 className="text-xl md:text-3xl t-shadow">functional</h3>
-              <p className="text-sm md:text-lg t-shadow">When people talk about functional programming
-                and/or development they are referring to a simple task based way of solving
-                complex problems. Functional problem solving favors composition over
-                inheritance (removing shared state) and reducing side effects in an
-                effort to increase the predictability of your apps behavior. Separating
-                side effects from the rest of your logic can make a program easier to
-                maintain, test, debug, extend and refactor.
+              <p className="text-sm md:text-lg t-shadow">When people talk about functional programming and/or 
+                development they are referring to a simple task-based way of solving complex problems. 
+                Functional problem-solving favors composition over inheritance (removing shared state) and 
+                reducing side effects in an effort to increase the predictability of the behavior of your app. 
+                Separating side effects from the rest of your logic can make a program easier to maintain, 
+                test, debug, extend and refactor.
                 </p>
             </div>
             <div className="w-full md:w-1/3 p-6">
               <h3 className="text-xl md:text-3xl t-shadow">fullstack</h3>
-              <p className="text-sm md:text-lg t-shadow">From Data stores to UI, running the entire stack
-                and knowing every technology being used give a unique advantage to people with
-                an immense desire to build. It creates a sense of ownership and personal pride that
-                permeates though every tech decision from the language you choose to develop project
-                with to every architectural building block you implement. Fullstack development
-                is reserved for a certain type of personatity that has a deep sense of self reliance
-                and healthy "get up and GO!" attitude.
+              <p className="text-sm md:text-lg t-shadow">Data stores to UI, running the entire stack and 
+                knowing every technology being used gives a unique advantage to people with an immense 
+                desire to build. It creates a sense of ownership and personal pride that permeates through 
+                every tech decision from the language you choose to develop a project with to every 
+                architectural building block you implement. Full-stack development is reserved for a 
+                certain type of personality that has a deep sense of self-reliance and healthy "get up 
+                and GO!" attitude.
               </p>
             </div>
           </div>

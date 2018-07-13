@@ -89,15 +89,13 @@ class Contact extends Component<Props, State>{
             </Fade>
             <Fade left cascade>
               <div className="w-full md:w-1/3 flex flex-wrap">
-                <div className="w-full button-boundary flex-wrap p-6">
-                  <a href="https://www.linkedin.com/in/nutheory/"
-                    target="_blank"  
-                    className="button linked-in my-4" 
-                    onMouseMove={this.mouseMove} 
-                    onMouseLeave={this.mouseLeave}
-                    onMouseDown={this.mouseDown}
-                    onMouseUp={this.mouseUp}
-                    data-title="Linked In"></a>
+                <div className="w-full button-boundary">
+                  <div className="p-6">
+                    <a href="mailto:derek@cffd.ink" className="contact-button">
+                      Contact
+                      <span>derek@cffd.ink</span>
+                    </a>
+                  </div>
                 </div>
                 <div className="w-full button-boundary flex-wrap p-6">
                   <a href={PDF}
@@ -111,13 +109,27 @@ class Contact extends Component<Props, State>{
                 </div>
               </div>
             </Fade>
-            <Fade right>
+            <Fade right cascade>
               <div className="w-full md:w-1/3 button-boundary h-48 flex flex-wrap">
-                <div className="p-6">
-                  <a href="mailto:derek@cffd.ink" className="contact-button">
-                    Contact
-                    <span>derek@cffd.ink</span>
-                  </a>
+                <div className="w-full button-boundary flex-wrap p-6">
+                  <a href="https://angel.co/derek-rush"
+                    target="_blank"  
+                    className="button angel my-4" 
+                    onMouseMove={this.mouseMove} 
+                    onMouseLeave={this.mouseLeave}
+                    onMouseDown={this.mouseDown}
+                    onMouseUp={this.mouseUp}
+                    data-title="AngelList"></a>
+                </div>
+                <div className="w-full button-boundary flex-wrap p-6">
+                  <a href="https://www.linkedin.com/in/nutheory/"
+                    target="_blank"  
+                    className="button linked-in my-4" 
+                    onMouseMove={this.mouseMove} 
+                    onMouseLeave={this.mouseLeave}
+                    onMouseDown={this.mouseDown}
+                    onMouseUp={this.mouseUp}
+                    data-title="Linked In"></a>
                 </div>
               </div>
             </Fade>
