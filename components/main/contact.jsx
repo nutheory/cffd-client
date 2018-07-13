@@ -87,7 +87,7 @@ class Contact extends Component<Props, State>{
                 </div>
               </div>
             </Fade>
-            <Fade left cascade>
+            <Fade bottom cascade>
               <div className="w-full md:w-1/3 flex flex-wrap">
                 <div className="w-full button-boundary">
                   <div className="p-6">
