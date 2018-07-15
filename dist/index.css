@@ -88,9 +88,9 @@ h2.title {
   width: 100vw;
   height: 32rem;
   overflow: hidden;
-  border-top: 1px solid #8795a1;
-  border-bottom: 1px solid #8795a1;
-  background-image: url(assets/23183f4c8e40ec2e060f80a46ccc4d64.jpg);
+  border-top: 1px solid #666;
+  border-bottom: 1px solid #666;
+  background-image: url(assets/dd826229dd8b7fa82ebb6a56383e79cf.jpg);
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }
@@ -99,8 +99,8 @@ h2.title {
   width: 100vw;
   height: 32rem;
   overflow: hidden;
-  border-top: 1px solid #8795a1;
-  border-bottom: 1px solid #8795a1;
+  border-top: 1px solid #666;
+  border-bottom: 1px solid #666;
   background-image: url(assets/b5657ebbf1193d4e4ba0af9bfef11890.jpg);
   background-repeat: no-repeat;
   background-size: 100% 100%;

@@ -610,7 +610,7 @@ eval("module.exports = \"assets/51c2eab22c8994e70e7633979982b451.svg\";\n\n//# s
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("module.exports = \"assets/23183f4c8e40ec2e060f80a46ccc4d64.jpg\";\n\n//# sourceURL=webpack:///./components/assets/quote@2x.jpg?");
+eval("module.exports = \"assets/dd826229dd8b7fa82ebb6a56383e79cf.jpg\";\n\n//# sourceURL=webpack:///./components/assets/quote@2x.jpg?");
 
 /***/ }),
 
@@ -643,7 +643,7 @@ eval("module.exports = \"assets/9a28da9f2a3fa419eb399e49f98cda39.svg\";\n\n//# s
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("module.exports = \"assets/7d96f56495cf29ea7b24cc505e8688f8.pdf\";\n\n//# sourceURL=webpack:///./components/assets/resume.pdf?");
+eval("module.exports = \"assets/3d5e3bfc51d7d2a4e9f835bc4a51f25c.pdf\";\n\n//# sourceURL=webpack:///./components/assets/resume.pdf?");
 
 /***/ }),
 
