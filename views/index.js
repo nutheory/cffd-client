@@ -9,7 +9,7 @@ import { ApolloProvider } from 'react-apollo'
 import { render } from 'react-dom'
 import '../styles/default.css'
 import App from '../components/layout/app'
-const url = window.location.includes("cffd.ink") ? 'http://http://cffd-elixir.herokuapp.com/' : 'http://0.0.0.0:4000/'
+const url = window.location.host.includes("cffd.ink") ? 'http://http://cffd-elixir.herokuapp.com/' : 'http://0.0.0.0:4000/'
 
 
 const requestLink = createHttpLink({

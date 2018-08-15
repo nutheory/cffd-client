@@ -96,14 +96,10 @@ class Playground extends Component<Props, State>{
     e.preventDefault()
     if(window.location.hash === step) {
       window.location.hash = '_'
-      console.log(window.location)
       window.location = `${step}`
     } else {
       window.location = `${step}`
     }
-    console.log(window.location.hash)
-    // const loc = window.location
-    // window.location = `${step}`
   }
 
   render(){

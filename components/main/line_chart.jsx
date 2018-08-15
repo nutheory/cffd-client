@@ -26,7 +26,6 @@ class LineChart extends Component<Props, State>{
   }
 
   buildChart(props){
-    console.log(props.data.fetch_stock)
     const svgNode = select(this.node)
     const data = props.data.fetch_stock.adjustments
     const margin = {top: 20, right: 20, bottom: 30, left: 40}
