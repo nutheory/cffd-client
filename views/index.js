@@ -9,23 +9,12 @@ import { ApolloProvider } from 'react-apollo'
 import { render } from 'react-dom'
 import '../styles/default.css'
 import App from '../components/layout/app'
+const url = window.location.includes("cffd.ink") ? 'http://http://cffd-elixir.herokuapp.com/' : 'http://0.0.0.0:4000/'
+
 
 const requestLink = createHttpLink({
-  uri: 'http://0.0.0.0:4000/api'
-  // credentials: 'same-origin'
+  uri: `${url}api`
 })
-
-// const middlewareLink = new ApolloLink((operation, forward) => {
-//   const token = localStorage.getItem('hf_auth_header_token') || null
-//   if(token){
-//     operation.setContext({
-//       // headers: {
-//       //   authorization: `${token}`
-//       // }
-//     })
-//   }
-//   return forward(operation)
-// })
 
 const errorLink = onError(({ operation, response, graphQLErrors, networkError }) => {
   if (graphQLErrors) { console.log('ErrorDialog', graphQLErrors) }
