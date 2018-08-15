@@ -1,11 +1,13 @@
 const express = require('express')
 const bodyParser = require('body-parser')
 const path = require('path')
+const enforce = require('express-sslify')
 const cookieParser = require('cookie-parser')
 const logger = require('morgan')
 const app = express()
 
 function serverStart(done){
+  app.use(enforce.HTTPS({ trustProtoHeader: true }))
   app.use(cookieParser())
   app.use(bodyParser.urlencoded({ limit: '1mb', extended: false }))
   app.use(bodyParser.json({limit: '1mb'}))
