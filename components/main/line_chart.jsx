@@ -34,8 +34,7 @@ class LineChart extends Component<Props, State>{
 
     const parseDate = timeFormat("%d-%b-%y")
     const formatTime = timeFormat("%B %e")
-    // const parseTime = timeFormat("%Y")
-    // const bisectDate = bisector(d =>  d.date).left
+
 
     const closeData = [] 
     const forecastData = [] 
@@ -88,9 +87,9 @@ class LineChart extends Component<Props, State>{
         .style('stroke', '#911380')
         .text(props.data.fetch_stock.name)
 
-var div = select("body").append("div")	
-    .attr("class", "tooltip")				
-    .style("opacity", 0);
+    const div = select("body").append("div")	
+      .attr("class", "tooltip")				
+      .style("opacity", 0)
 
     svgBaseG.append("path")
       .datum(closeData)
@@ -106,15 +105,15 @@ var div = select("body").append("div")
     svgBaseG.selectAll("dot")	
       .data(allData)			
       .enter().append("circle")
-      .attr("r", 1.4)
+      .attr("r", 2)
       .style('fill', '#2779bd')
       .attr("cx", function(d) { return x(d.date); })		 
       .attr("cy", function(d) { return y(d.value); })		
-      .on("mouseover", function(d) {	
-        console.log('DDD', d)	
+      .on("mouseover", function(d) {
           div.transition()		
               .duration(200)		
-              .style("opacity", .9);		
+              .style("opacity", .9)
+              .style("position", "absolute");		
           div.html(formatTime(d.date) + "<br/>"  + Math.round(d.value * 100) / 100)	
               .style("left", (event.pageX) + "px")		
               .style("top", (event.pageY - 28) + "px");	
@@ -146,7 +145,7 @@ var div = select("body").append("div")
       <svg
         width={width} 
         height={height}
-        ref={node => this.node = node} ></svg>
+        ref={node => this.node = node} style={{overflow: 'hidden'}}></svg>
     )
   }
 }
