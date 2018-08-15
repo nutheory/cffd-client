@@ -1,5 +1,6 @@
 @tailwind preflight;
 @tailwind components;
 @import url('https://fonts.googleapis.com/css?family=Shrikhand|Source+Sans+Pro:300,400,600');
+@import "select.css";
 @import "public.css";
 @tailwind utilities;

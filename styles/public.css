@@ -1,9 +1,16 @@
+html{
+  height: auto !important;
+  overflow-y: auto !important;
+}
+
 body{
   background: #22292F;
+  height: auto !important;
   color: #fff;
   max-width: 100%;
+  overflow-y: auto !important;
   overflow-x: hidden;
-  font-family: 'Source Sans Pro','system-ui','-apple-system','BlinkMacSystemFont','Segoe UI','Roboto','Oxygen','cursive','Droid Sans','Helvetica Neue'
+  font-family: 'Source Sans Pro','system-ui','-apple-system','BlinkMacSystemFont','Segoe UI','Roboto','Oxygen','cursive','Droid Sans','Helvetica Neue';
 }
 
 .public-header{
@@ -50,7 +57,6 @@ body{
 }
 
 .main{
-  width:100vw;
   height:100vh;
   background-image: url('../components/assets/home@2x.jpg');
   background-position: center;
@@ -85,7 +91,6 @@ h2.title{
 }
 
 .quote{
-  width:100vw;
   height:32rem;
   overflow: hidden;
   border-top: 1px solid #666;
@@ -96,7 +101,6 @@ h2.title{
 }
 
 .gap{
-  width:100vw;
   height:32rem;
   overflow: hidden;
   border-top: 1px solid #666;
@@ -107,7 +111,6 @@ h2.title{
 }
 
 .about{
-  width:100vw;
   height:100vh;
   background-position: center;
   background-repeat: no-repeat;
@@ -130,7 +133,6 @@ h2.title{
 }
 
 .work{
-  width:100vw;
   background-image: url('../components/assets/work@2x.jpg');
   background-position: center;
   background-repeat: no-repeat;
@@ -141,8 +143,32 @@ h2.title{
   }
 }
 
+.playground{
+  background-image: url('../components/assets/playground@2x.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+  & h4{
+    color: #B8B8B8;
+    font-weight: 300;
+  }
+  & h4.ins{
+    font-size: 1rem;
+    font-family: 'Shrikhand', cursive;
+    font-weight: normal;
+  }
+  & h4.x-title{
+    color: #fff;
+    font-family: 'Shrikhand', cursive;
+  }
+  & h4.subtitle{
+    color: #B8B8B8;
+    font-weight: 300;
+  }
+}
+
 .contact{
-  width:100vw;
   border-top: 1px solid #666;
   background-image: url('../components/assets/contact@2x.jpg');
   background-position: center;
@@ -292,6 +318,61 @@ a:link, a:visited, a:active{
   margin-left: -1.7rem;
 }
 
+a.button-short{
+	position: relative;
+	display: inline-block;
+	padding: 0.8em 1.2em 0.9em 3.4em;
+	text-decoration: none;
+	text-align: center;
+	cursor: pointer;
+	user-select: none;
+  color: white;
+
+  &.source:before {
+    background-image: url('../components/assets/github.svg');
+    background-size: 24px;
+    background-position: 12px 6px;
+  }
+
+  &:before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+    right: 0;
+    background-repeat: no-repeat; 
+		border-radius: 4px;
+		transition: box-shadow .5s ease, transform .2s ease; 
+		will-change: transform;
+		box-shadow: 0 2px 5px rgba(0, 0, 0, .2);
+		transform:
+			translateY(var(--ty, 0))
+			rotateX(var(--rx, 0))
+			rotateY(var(--ry, 0))
+			translateZ(var(--tz, -12px));
+	}
+	
+	&:hover:before {
+    border: 2px solid #333;
+		box-shadow: 0 8px 8px rgba(0, 0, 0, .8);
+	}
+	
+	&:after {
+		position: relative;
+		display: inline-block;
+		content: attr(data-title);
+		transition: transform .2s ease; 
+		font-weight: bold;
+		letter-spacing: .01em;
+		will-change: transform;
+		transform:
+			translateY(var(--ty, 0))
+			rotateX(var(--rx, 0))
+			rotateY(var(--ry, 0));
+	}
+}
+
 a.button{
 	position: relative;
 	display: inline-block;
@@ -301,7 +382,7 @@ a.button{
 	cursor: pointer;
 	user-select: none;
   color: white;
-  
+
 	&.github:before {
     background-image: url('../components/assets/github.svg');
     background-size: 32px;
@@ -378,4 +459,124 @@ a.button{
 	height: 80px;
 	transform-style: preserve-3d;
 	transform: perspective(800px);
+}
+
+.step {
+  position: relative;
+  width: 900px;
+  padding: 60px 40px;
+  margin: 20px auto;
+
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing:    border-box;
+  -ms-box-sizing:     border-box;
+  -o-box-sizing:      border-box;
+  box-sizing:         border-box;
+
+}
+
+/*
+  ... and we enhance the styles for impress.js.
+  Basically we remove the margin and make inactive steps a little bit transparent.
+*/
+.impress-enabled .step {
+  margin: 0;
+  opacity: 0.3;
+
+  -webkit-transition: opacity 1s;
+  -moz-transition:    opacity 1s;
+  -ms-transition:     opacity 1s;
+  -o-transition:      opacity 1s;
+  transition:         opacity 1s;
+}
+
+.impress-enabled .step.active { opacity: 1 }
+
+/*
+  These 'slide' step styles were heavily inspired by HTML5 Slides:
+  http://html5slides.googlecode.com/svn/trunk/styles.css
+  ;)
+  They cover everything what you see on first three steps of the demo.
+*/
+.slide {
+  display: block;
+
+  width: 900px;
+  height: 700px;
+  padding: 40px 60px;
+
+  background-color: white;
+  border: 1px solid rgba(0, 0, 0, .3);
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, .1);
+
+  color: rgb(102, 102, 102);
+  text-shadow: 0 2px 2px rgba(0, 0, 0, .1);
+
+  font-family: 'Open Sans', Arial, sans-serif;
+  font-size: 30px;
+  line-height: 36px;
+  letter-spacing: -1px;
+}
+
+.slide q {
+  display: block;
+  font-size: 50px;
+  line-height: 72px;
+
+  margin-top: 100px;
+}
+
+.slide q strong {
+  white-space: nowrap;
+}
+
+
+.base-chart{
+  background: #22292F;
+  width: 100%;
+  height: 100%;
+}
+
+.axis {
+	font: 10px sans-serif;
+}
+
+.axis-title{
+  fill: #911380;
+  stroke: #cc2766;
+  color: #911380;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #D4D8DA;
+  stroke-width: 2px;
+  shape-rendering: crispEdges;
+}
+
+.line {
+  fill: none;
+  stroke: rgb(12, 88, 110);
+  stroke-width: 1.5pt;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.overlay {
+  fill: none;
+  pointer-events: all;
+}
+
+.focus circle {
+  fill: #F1F3F3;
+  stroke: #6F257F;
+  stroke-width: 5px;
+}
+  
+.hover-line {
+  stroke: #6F257F;
+  stroke-width: 2px;
+  stroke-dasharray: 3,3;
 }

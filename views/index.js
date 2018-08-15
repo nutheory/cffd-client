@@ -11,21 +11,21 @@ import '../styles/default.css'
 import App from '../components/layout/app'
 
 const requestLink = createHttpLink({
-  uri: '/graphql',
-  credentials: 'same-origin'
+  uri: 'http://0.0.0.0:4000/api'
+  // credentials: 'same-origin'
 })
 
-const middlewareLink = new ApolloLink((operation, forward) => {
-  const token = localStorage.getItem('hf_auth_header_token') || null
-  if(token){
-    operation.setContext({
-      headers: {
-        authorization: `${token}`
-      }
-    })
-  }
-  return forward(operation)
-})
+// const middlewareLink = new ApolloLink((operation, forward) => {
+//   const token = localStorage.getItem('hf_auth_header_token') || null
+//   if(token){
+//     operation.setContext({
+//       // headers: {
+//       //   authorization: `${token}`
+//       // }
+//     })
+//   }
+//   return forward(operation)
+// })
 
 const errorLink = onError(({ operation, response, graphQLErrors, networkError }) => {
   if (graphQLErrors) { console.log('ErrorDialog', graphQLErrors) }
@@ -34,7 +34,7 @@ const errorLink = onError(({ operation, response, graphQLErrors, networkError })
 
 const cache = new InMemoryCache()
 
-const link = ApolloLink.from([middlewareLink, errorLink, requestLink])
+const link = ApolloLink.from([ errorLink, requestLink])
 
 const client = new ApolloClient({
   link,

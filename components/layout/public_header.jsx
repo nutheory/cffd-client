@@ -6,6 +6,7 @@ type Props = {
   jumpIntro: Function,
   jumpAbout: Function,
   jumpWork: Function,
+  jumpPlayground: Function,
   jumpContact: Function
 }
 
@@ -65,6 +66,8 @@ class PublicHeader extends Component<Props, State>{
               <div className="hover:cursor-pointer hover:underline" onClick={this.props.jumpAbout}>About</div>
               <div className="mx-2">/</div>
               <div className="hover:cursor-pointer hover:underline" onClick={this.props.jumpWork}>Work</div>
+              <div className="mx-2">/</div>
+              <div className="hover:cursor-pointer hover:underline" onClick={this.props.jumpPlayground}>Playground</div>
               <div className="mx-2">/</div>
               <div className="hover:cursor-pointer hover:underline" onClick={this.props.jumpContact}>Contact</div>
             </div>

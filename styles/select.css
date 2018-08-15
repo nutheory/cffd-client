@@ -1,0 +1,174 @@
+/*
+
+  React Responsive Select - Default styles
+
+*/
+.caret-icon{
+  position: absolute;
+  right: 1rem;
+  top: 1.25rem;
+  fill: #606f7b;
+  text-shadow: rgb(0, 0, 0) 2px 2px 2px;
+}
+
+.rrs {
+  position: relative;
+  box-sizing: border-box;
+}
+
+.rrs *,
+.rrs *:before,
+.rrs *:after {
+  box-sizing: border-box;
+}
+
+.rrs__button {
+  color: #606f7b;
+  position: relative;
+  cursor: pointer;
+  height: 44px;
+  line-height: 44px;
+  background: #22292F;
+  border-radius: 2px;
+  text-shadow: rgb(0, 0, 0) 2px 2px 2px;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.rrs__button--disabled {
+  color: #999999;
+  background: #f5f5f5;
+  cursor: default;
+}
+
+.rrs__button:focus {
+  outline: 0;
+}
+
+.rrs__button + .rrs__options {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background: #22292F;
+  position: absolute;
+  z-index: 2;
+  border: 1px solid #606f7b;
+  border-top: 1px solid #606f7b;
+  border-radius: 0 0 2px 2px;
+  top: 44px;
+  width: 100%;
+  height: 0;
+  visibility: hidden;
+  overflow: hidden;
+  text-shadow: rgb(0, 0, 0) 2px 2px 2px;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+}
+
+.rrs--options-visible .rrs__options {
+  height: auto;
+  visibility: visible;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  max-height: 230px;
+}
+
+.rrs__option {
+  cursor: pointer;
+  padding: 0.75rem 1rem;
+  margin: 0;
+  border-top: #606f7b 1px solid;
+}
+
+.rrs__option * {
+  pointer-events: none;
+}
+
+.rrs__option:first-of-type {
+  border-top: 0;
+}
+
+.rrs__option:focus {
+  outline: 0;
+}
+
+.rrs__option:hover {
+  text-shadow: rgb(0, 0, 0) 2px 2px 2px;
+  background:#3D4852;
+  color: #606f7b;
+}
+
+.rrs__option:active {
+  text-shadow: rgb(0, 0, 0) 2px 2px 2px;
+  background:#3D4852;
+}
+
+.rrs__option.rrs__option--next-selection {
+  background:#3D4852;
+  color: #606f7b;
+  text-shadow: rgb(0, 0, 0) 2px 2px 2px;
+}
+
+.rrs__option.rrs__option--selected {
+  color: #606f7b;
+  text-shadow: rgb(0, 0, 0) 2px 2px 2px;
+}
+
+.rrs__option.rrs__option--disabled {
+  color: #999999;
+  background:#3D4852;
+  cursor: default;
+}
+
+.rrs__label {
+  padding: 0 2rem 0 1rem;
+  display: inline-flex;
+  width: 100%;
+  max-width: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  font-size: inherit;
+  background: transparent;
+  border: 1px solid rgba(0, 0, 0, 0);
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.rrs--options-visible .rrs__label,
+.rrs__button:focus .rrs__label {
+  border-bottom: 1px solid #fff;
+  outline: 0;
+  border: 1px solid #999;
+}
+
+.rrs--has-changed .rrs__label {
+  color: #0273b5;
+}
+
+/*
+
+  Multiselect overrides
+
+*/
+
+.rrs__multiselect-label {
+  display: inline-flex;
+  max-width: 100%;
+  line-height: 1;
+}
+
+.rrs__multiselect-label__text {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.rrs__multiselect-label__badge{
+  border: 1px solid #ccc;
+  padding: 1px 6px;
+  margin: 0 0 0 4px;
+  border-radius: 8px;
+  color: #666;
+  font-size: 11px;
+  vertical-align: middle;
+  display: inline-block;
+}

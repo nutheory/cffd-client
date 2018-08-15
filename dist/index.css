@@ -1,8 +1,193 @@
 @import url(https://fonts.googleapis.com/css?family=Shrikhand|Source+Sans+Pro:300,400,600);
+/*
+
+  React Responsive Select - Default styles
+
+*/
+
+.caret-icon {
+  position: absolute;
+  right: 1rem;
+  top: 1.25rem;
+  fill: #606f7b;
+  text-shadow: rgb(0, 0, 0) 2px 2px 2px;
+}
+
+.rrs {
+  position: relative;
+  box-sizing: border-box;
+}
+
+.rrs *,
+.rrs *:before,
+.rrs *:after {
+  box-sizing: border-box;
+}
+
+.rrs__button {
+  color: #606f7b;
+  position: relative;
+  cursor: pointer;
+  height: 44px;
+  line-height: 44px;
+  background: #22292f;
+  border-radius: 2px;
+  text-shadow: rgb(0, 0, 0) 2px 2px 2px;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, .2);
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.rrs__button--disabled {
+  color: #999;
+  background: #f5f5f5;
+  cursor: default;
+}
+
+.rrs__button:focus {
+  outline: 0;
+}
+
+.rrs__button + .rrs__options {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background: #22292f;
+  position: absolute;
+  z-index: 2;
+  border: 1px solid #606f7b;
+  border-top: 1px solid #606f7b;
+  border-radius: 0 0 2px 2px;
+  top: 44px;
+  width: 100%;
+  height: 0;
+  visibility: hidden;
+  overflow: hidden;
+  text-shadow: rgb(0, 0, 0) 2px 2px 2px;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, .2);
+}
+
+.rrs--options-visible .rrs__options {
+  height: auto;
+  visibility: visible;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  max-height: 230px;
+}
+
+.rrs__option {
+  cursor: pointer;
+  padding: .75rem 1rem;
+  margin: 0;
+  border-top: #606f7b 1px solid;
+}
+
+.rrs__option * {
+  pointer-events: none;
+}
+
+.rrs__option:first-of-type {
+  border-top: 0;
+}
+
+.rrs__option:focus {
+  outline: 0;
+}
+
+.rrs__option:hover {
+  text-shadow: rgb(0, 0, 0) 2px 2px 2px;
+  background: #3d4852;
+  color: #606f7b;
+}
+
+.rrs__option:active {
+  text-shadow: rgb(0, 0, 0) 2px 2px 2px;
+  background: #3d4852;
+}
+
+.rrs__option.rrs__option--next-selection {
+  background: #3d4852;
+  color: #606f7b;
+  text-shadow: rgb(0, 0, 0) 2px 2px 2px;
+}
+
+.rrs__option.rrs__option--selected {
+  color: #606f7b;
+  text-shadow: rgb(0, 0, 0) 2px 2px 2px;
+}
+
+.rrs__option.rrs__option--disabled {
+  color: #999;
+  background: #3d4852;
+  cursor: default;
+}
+
+.rrs__label {
+  padding: 0 2rem 0 1rem;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  width: 100%;
+  max-width: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  font-size: inherit;
+  background: transparent;
+  border: 1px solid rgba(0, 0, 0, 0);
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.rrs--options-visible .rrs__label,
+.rrs__button:focus .rrs__label {
+  border-bottom: 1px solid #fff;
+  outline: 0;
+  border: 1px solid #999;
+}
+
+.rrs--has-changed .rrs__label {
+  color: #0273b5;
+}
+
+/*
+
+  Multiselect overrides
+
+*/
+
+.rrs__multiselect-label {
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  max-width: 100%;
+  line-height: 1;
+}
+
+.rrs__multiselect-label__text {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.rrs__multiselect-label__badge {
+  border: 1px solid #ccc;
+  padding: 1px 6px;
+  margin: 0 0 0 4px;
+  border-radius: 8px;
+  color: #666;
+  font-size: 11px;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+html {
+  height: auto !important;
+  overflow-y: auto !important;
+}
+
 body {
   background: #22292f;
+  height: auto !important;
   color: #fff;
   max-width: 100%;
+  overflow-y: auto !important;
   overflow-x: hidden;
   font-family: 'Source Sans Pro', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Oxygen', 'cursive', 'Droid Sans', 'Helvetica Neue';
 }
@@ -46,7 +231,6 @@ body {
 }
 
 .main {
-  width: 100vw;
   height: 100vh;
   background-image: url(assets/820be7fb01252173525034258c8fcdbf.jpg);
   background-position: center;
@@ -85,7 +269,6 @@ h2.title {
 }
 
 .quote {
-  width: 100vw;
   height: 32rem;
   overflow: hidden;
   border-top: 1px solid #666;
@@ -96,7 +279,6 @@ h2.title {
 }
 
 .gap {
-  width: 100vw;
   height: 32rem;
   overflow: hidden;
   border-top: 1px solid #666;
@@ -107,7 +289,6 @@ h2.title {
 }
 
 .about {
-  width: 100vw;
   height: 100vh;
   background-position: center;
   background-repeat: no-repeat;
@@ -131,7 +312,6 @@ h2.title {
 }
 
 .work {
-  width: 100vw;
   background-image: url(assets/de4a152554239597ea3a2701c08c0017.jpg);
   background-position: center;
   background-repeat: no-repeat;
@@ -143,8 +323,36 @@ h2.title {
   font-weight: 300;
 }
 
+.playground {
+  background-image: url(assets/434a05251721d49c0427aece21185324.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.playground h4 {
+  color: #b8b8b8;
+  font-weight: 300;
+}
+
+.playground h4.ins {
+  font-size: 1rem;
+  font-family: 'Shrikhand', cursive;
+  font-weight: normal;
+}
+
+.playground h4.x-title {
+  color: #fff;
+  font-family: 'Shrikhand', cursive;
+}
+
+.playground h4.subtitle {
+  color: #b8b8b8;
+  font-weight: 300;
+}
+
 .contact {
-  width: 100vw;
   border-top: 1px solid #666;
   background-image: url(assets/18602cdbdeca11e11f9646d5a21bd052.jpg);
   background-position: center;
@@ -302,6 +510,59 @@ a:active {
   margin-left: -1.7rem;
 }
 
+a.button-short {
+  position: relative;
+  display: inline-block;
+  padding: .8em 1.2em .9em 3.4em;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  color: white;
+}
+
+a.button-short.source:before {
+  background-image: url(assets/1f4d27b162c9f6302baacca8ef535926.svg);
+  background-size: 24px;
+  background-position: 12px 6px;
+}
+
+a.button-short:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-repeat: no-repeat;
+  border-radius: 4px;
+  transition: box-shadow .5s ease, transform .2s ease;
+  will-change: transform;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, .2);
+  transform: translateY(0) rotateX(0) rotateY(0) translateZ(-12px);
+  transform: translateY(var(--ty, 0)) rotateX(var(--rx, 0)) rotateY(var(--ry, 0)) translateZ(var(--tz, -12px));
+}
+
+a.button-short:hover:before {
+  border: 2px solid #333;
+  box-shadow: 0 8px 8px rgba(0, 0, 0, .8);
+}
+
+a.button-short:after {
+  position: relative;
+  display: inline-block;
+  content: attr(data-title);
+  transition: transform .2s ease;
+  font-weight: bold;
+  letter-spacing: .01em;
+  will-change: transform;
+  transform: translateY(0) rotateX(0) rotateY(0);
+  transform: translateY(var(--ty, 0)) rotateX(var(--rx, 0)) rotateY(var(--ry, 0));
+}
+
 a.button {
   position: relative;
   display: inline-block;
@@ -389,6 +650,115 @@ a.button:after {
   height: 80px;
   transform-style: preserve-3d;
   transform: perspective(800px);
+}
+
+.step {
+  position: relative;
+  width: 900px;
+  padding: 60px 40px;
+  margin: 20px auto;
+  -ms-box-sizing: border-box;
+   -o-box-sizing: border-box;
+      box-sizing: border-box;
+}
+
+/*
+  ... and we enhance the styles for impress.js.
+  Basically we remove the margin and make inactive steps a little bit transparent.
+*/
+
+.impress-enabled .step {
+  margin: 0;
+  opacity: .3;
+  transition: opacity 1s;
+}
+
+.impress-enabled .step.active {
+  opacity: 1;
+}
+
+/*
+  These 'slide' step styles were heavily inspired by HTML5 Slides:
+  http://html5slides.googlecode.com/svn/trunk/styles.css
+  ;)
+  They cover everything what you see on first three steps of the demo.
+*/
+
+.slide {
+  display: block;
+  width: 900px;
+  height: 700px;
+  padding: 40px 60px;
+  background-color: white;
+  border: 1px solid rgba(0, 0, 0, .3);
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, .1);
+  color: rgb(102, 102, 102);
+  text-shadow: 0 2px 2px rgba(0, 0, 0, .1);
+  font-family: 'Open Sans', Arial, sans-serif;
+  font-size: 30px;
+  line-height: 36px;
+  letter-spacing: -1px;
+}
+
+.slide q {
+  display: block;
+  font-size: 50px;
+  line-height: 72px;
+  margin-top: 100px;
+}
+
+.slide q strong {
+  white-space: nowrap;
+}
+
+.base-chart {
+  background: #22292f;
+  width: 100%;
+  height: 100%;
+}
+
+.axis {
+  font: 10px sans-serif;
+}
+
+.axis-title {
+  fill: #911380;
+  stroke: #cc2766;
+  color: #911380;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #d4d8da;
+  stroke-width: 2px;
+  shape-rendering: crispEdges;
+}
+
+.line {
+  fill: none;
+  stroke: rgb(12, 88, 110);
+  stroke-width: 1.5pt;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.overlay {
+  fill: none;
+  pointer-events: all;
+}
+
+.focus circle {
+  fill: #f1f3f3;
+  stroke: #6f257f;
+  stroke-width: 5px;
+}
+
+.hover-line {
+  stroke: #6f257f;
+  stroke-width: 2px;
+  stroke-dasharray: 3, 3;
 }
 
 /*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
