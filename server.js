@@ -7,7 +7,8 @@ const logger = require('morgan')
 const app = express()
 
 function serverStart(done){
-  app.use(enforce.HTTPS({ trustProtoHeader: true }))
+  process.env.NODE_ENV === 'production' ? app.use(enforce.HTTPS({ trustProtoHeader: true })) : null
+  // app.use(enforce.HTTPS({ trustProtoHeader: true }))
   app.use(cookieParser())
   app.use(bodyParser.urlencoded({ limit: '1mb', extended: false }))
   app.use(bodyParser.json({limit: '1mb'}))

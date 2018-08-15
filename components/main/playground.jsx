@@ -137,11 +137,11 @@ class Playground extends Component<Props, State>{
                     </div>
                     <div className="mt-2 mx-4">
                       <p className="text-sm md:text-lg font-light my-4">I guess the obvious question might be... Why? 
-                      The honest answer is that I wanted to learn Elixir, Python, D3, and get my feet wet with Machine
-                      learning. Elixir and Pheonix seemed very appealing to me coming from a Rails/JS background it seemed 
-                      like a decent mix of functional programming and the beauty of Ruby. I naturally reached for Absinthe 
-                      to integrate GraphQL and hacked together a working version <a href="https://github.com/nutheory/erlport-simplified" target="_blank">ErlPort</a> and got to work.</p>
-                      <p className="text-sm md:text-lg font-light my-4">On the Python side of this experiment I use  <a href="https://github.com/mendrugory/piton" target="_blank">Piton</a> to 
+                      The honest answer is that I wanted to learn Elixir, Python, D3, and get my feet wet with machine
+                      learning. Elixir and Pheonix were appealing to me coming from a Ruby on Rails/Javascript background. Together they seemed 
+                      like a good mix of functional programming with the simplicity of Ruby. I naturally reached for Absinthe 
+                      to integrate GraphQL and hacked together a working version of <a href="https://github.com/nutheory/erlport-simplified" target="_blank">ErlPort</a> and got to work.</p>
+                      <p className="text-sm md:text-lg font-light my-4">On the Python side of this experiment I used <a href="https://github.com/mendrugory/piton" target="_blank">Piton</a> to 
                       spin up Python processes within Elixir. From there its all on Python, Pandas, Numpy, and SciKit Learn 
                       for data processing. The data is then returned through the stack to be plotted client side using D3.</p>
                       <p className="text-right font-semibold hover:cursor-pointer hover:underline" onClick={(e) => {this.jumpStep(e, "#/x-example")}}>Continue reading &#8594;</p>
